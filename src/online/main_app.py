@@ -4,10 +4,8 @@ os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 from torch_bootstrap import prepare_torch_dlls
 prepare_torch_dlls()
 
-# ！！！绝杀手段：在所有第三方库之前，强制优先唤醒 PyTorch 的底层 DLL！！！
-import torch 
 
-# 下面再放原本的其他导入
+
 import threading
 import time
 import socket
